@@ -58,7 +58,7 @@ git: fclean
 	git status
 	git add .
 	git status
-	git commit -m "new_version"
+	git commit -m "PUSH_SWAP"
 	git push
 
 clean:
