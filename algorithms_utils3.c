@@ -6,7 +6,7 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 17:30:50 by gkomba            #+#    #+#             */
-/*   Updated: 2024/07/30 16:09:26 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/01 15:20:23 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	ft_move_a_to_b(t_list **stack_a, t_list **stack_b, int size)
 		ft_sort_three(stack_a, 0);
 	if (size <= 3)
 		return ;
-	pivot = get_pivot(*stack_a, size);
+	pivot = get_pivot_qs(*stack_a, size);
 	i = -1;
 	ra = 0;
 	pb = 0;
@@ -94,7 +94,7 @@ void	ft_move_b_to_a(t_list **stack_a, t_list **stack_b, int size)
 		ft_pa(stack_b, stack_a);
 		return ;
 	}
-	pivot = get_pivot_b(*stack_b);
+	pivot = get_pivot_qs(*stack_b, size);
 	i = -1;
 	rb = 0;
 	pa = 0;

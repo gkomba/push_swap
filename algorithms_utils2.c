@@ -6,7 +6,7 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 19:18:27 by gkomba            #+#    #+#             */
-/*   Updated: 2024/07/30 16:09:27 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/01 15:20:48 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,28 @@ void	ft_push_back(t_list **stack_b, t_list **stack_a)
 	}
 }
 
-int	get_pivot_b(t_list *stack_b)
+int	get_pivot_qs(t_list *stack, int size)
 {
-	return ((ft_find_max_list(stack_b) - ft_find_min_list(stack_b)) / 2);
+	t_list	*curr;
+	t_list	*run;
+	int		i;
+
+	curr = stack;
+	if (!stack)
+		return (0);
+	while (curr)
+	{
+		i = 0;
+		run = stack;
+		while (run)
+		{
+			if (run->value >= curr->value)
+				i++;
+			run = run->next;
+		}
+		if (i == size / 2 || i == 0)
+			return (curr->value);
+		curr = curr->next;
+	}
+	return (0);
 }
