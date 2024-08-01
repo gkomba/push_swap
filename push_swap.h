@@ -6,7 +6,7 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 11:21:51 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/01 15:36:57 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/01 15:39:31 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,13 +112,11 @@ int						ft_do_ra_and_rb_count(t_list **stack, char s);
 int						ft_do_pb_and_pa_count(t_list **stack_a,
 							t_list **stack_b, char stack);
 
-//				Print Funtions				by:
-// gkomba
+//				Print Funtions				
 void					ft_send_error_sms(void);
 void					ft_putlist_nbr(t_list *list);
 
-//				Int List Funtions			by:
-// gkomba
+//				Int List Funtions			
 int						ft_find_max_list(t_list *lst);
 int						ft_find_min_list(t_list *lst);
 int						ft_list_size(t_list *lst);

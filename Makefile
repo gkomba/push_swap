@@ -6,7 +6,7 @@
 #    By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/23 20:21:07 by gkomba            #+#    #+#              #
-#    Updated: 2024/07/30 16:09:05 by gkomba           ###   ########.fr        #
+#    Updated: 2024/08/01 15:40:15 by gkomba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,6 @@ ${NAME}: ${OBJS}
 	@make -s -C ${LIBFT}
 	@${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${LIBFT}/libft.a ${PRINTF}/libftprintf.a
 	@echo "\033[0;32mOK!\033[0m"
-	@make clean
 
 norm:
 	norminette
