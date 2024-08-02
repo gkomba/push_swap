@@ -6,7 +6,7 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:32:29 by gkomba            #+#    #+#             */
-/*   Updated: 2024/07/30 16:09:04 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/02 13:15:11 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int ac, char **av)
 		exit(EXIT_SUCCESS);
 	ft_input_error(ac, av);
 	ft_take_args(av, &stack_a);
-	ft_check_list_dup(stack_a);
+	ft_check_list_dup(&stack_a);
 	ft_sort_stacks(&stack_a, &stack_b);
 	ft_free_stacks(&stack_a);
 	exit(EXIT_SUCCESS);

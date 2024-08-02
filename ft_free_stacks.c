@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free_stacks.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
+/*   By: gildo <gildo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 11:45:11 by gkomba            #+#    #+#             */
-/*   Updated: 2024/07/30 16:09:13 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/02 12:53:19 by gildo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ void	ft_free_stacks(t_list **stack)
 {
 	t_list	*node;
 
-	while ((*stack)->next)
+	while ((*stack))
 	{
 		node = *stack;
 		*stack = (*stack)->next;
 		free(node);
 	}
-	free(*stack);
 }

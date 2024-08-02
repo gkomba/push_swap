@@ -6,28 +6,33 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 18:10:29 by gkomba            #+#    #+#             */
-/*   Updated: 2024/07/30 16:09:19 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/02 13:14:31 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_check_list_dup(t_list *lst)
+void	ft_check_list_dup(t_list **lst)
 {
+	t_list	*curr;
 	t_list	*tmp;
 
-	if (lst == NULL || lst->next == NULL)
+	if ((*lst) == NULL || (*lst)->next == NULL)
 		return ;
-	while (lst)
+	curr = *lst;
+	while (curr)
 	{
-		tmp = lst->next;
+		tmp = curr->next;
 		while (tmp)
 		{
-			if (tmp->value == lst->value)
+			if (tmp->value == curr->value)
+			{
+				ft_free_stacks(lst);
 				ft_send_error_sms();
+			}
 			tmp = tmp->next;
 		}
-		lst = lst->next;
+		curr = curr->next;
 	}
 }
 

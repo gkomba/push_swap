@@ -6,7 +6,7 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 11:21:51 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/01 15:39:31 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/02 13:14:54 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void					ft_swap_last_to_first(t_list **lst);
 void					ft_swap_first_to_last(t_list **lst);
 void					ft_list_remove(t_list **lst, int value);
 void					ft_remove_list_duplicate(t_list **lst);
-void					ft_check_list_dup(t_list *lst);
+void					ft_check_list_dup(t_list **lst);
 void					ft_sort_list(t_list *lst);
 void					ft_add_first(t_list **list, int new_value);
 void					ft_add_last(t_list **list, int new_value);

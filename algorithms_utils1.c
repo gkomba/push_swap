@@ -6,7 +6,7 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 18:44:10 by gkomba            #+#    #+#             */
-/*   Updated: 2024/07/30 16:09:30 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/02 10:37:40 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	ft_push_up(t_list **stack)
 
 	min_pos = ft_find_min_pos(*stack);
 	len = ft_list_size(*stack);
-	if (min_pos == 0)
+	if (min_pos == 1)
 		ft_sa(stack);
 	if (min_pos <= len / 2)
 	{
