@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_list_element.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
+/*   By: gildo <gildo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 11:37:40 by gkomba            #+#    #+#             */
-/*   Updated: 2024/07/30 16:09:16 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/07/23 19:46:15 by gildo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	ft_find_list_element(t_list *lst, int item)
 {

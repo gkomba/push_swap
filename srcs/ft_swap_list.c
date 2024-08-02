@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap_list.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
+/*   By: gkomba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 19:04:34 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/01 13:58:45 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/06/26 19:31:46 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 static	int	ft_swap_two_firsts(t_list **lst)
 {

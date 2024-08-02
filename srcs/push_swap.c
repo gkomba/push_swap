@@ -1,49 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils2.c                                           :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/24 12:57:38 by gildo             #+#    #+#             */
-/*   Updated: 2024/07/30 16:08:55 by gkomba           ###   ########.fr       */
+/*   Created: 2024/06/25 17:32:29 by gkomba            #+#    #+#             */
+/*   Updated: 2024/07/30 15:35:23 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-int	ft_find_alpha_in_list(char *str)
+int	main(int ac, char **av)
 {
-	int	i;
+	t_list	*stack_a;
+	t_list	*stack_b;
 
-	i = 0;
-	while (*str)
-	{
-		if (ft_isalpha(*str))
-			i = 1;
-		str++;
-	}
-	return (i);
-}
-
-void	ft_is_only_sapce(char *str)
-{
-	while (*str)
-	{
-		if (*str == 32 || *str == '\t')
-			str++;
-		else
-			return ;
-	}
-	ft_send_error_sms();
-}
-
-void	ft_free_matriz(char **arr)
-{
-	int	i;
-
-	i = -1;
-	while (arr[++i])
-		free(arr[i]);
-	free(arr);
+	stack_a = NULL;
+	stack_b = NULL;
+	if (ac == 1)
+		exit(EXIT_SUCCESS);
+	ft_input_error(ac, av);
+	ft_take_args(av, &stack_a);
+	ft_check_list_dup(stack_a);
+	ft_sort_stacks(&stack_a, &stack_b);
+	ft_free_stacks(&stack_a);
+	exit(EXIT_SUCCESS);
 }

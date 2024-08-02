@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checkargs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
+/*   By: gildo <gildo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 11:05:50 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/02 13:16:04 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/07/24 10:28:10 by gildo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_input_error(int argc, char **argv)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_add_list_element.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
+/*   By: gkomba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 11:02:26 by gkomba            #+#    #+#             */
-/*   Updated: 2024/07/30 16:09:20 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/06/26 19:15:51 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_add_first(t_list **list, int new_value)
 {

@@ -6,11 +6,11 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 19:18:27 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/01 15:20:48 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/02 17:44:57 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	ft_do_ra_and_rb_count(t_list **stack, char s)
 {

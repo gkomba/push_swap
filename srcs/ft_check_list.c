@@ -3,36 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_list.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
+/*   By: gildo <gildo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 18:10:29 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/02 13:14:31 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/07/26 16:13:53 by gildo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void	ft_check_list_dup(t_list **lst)
+void	ft_check_list_dup(t_list *lst)
 {
-	t_list	*curr;
 	t_list	*tmp;
 
-	if ((*lst) == NULL || (*lst)->next == NULL)
+	if (lst == NULL || lst->next == NULL)
 		return ;
-	curr = *lst;
-	while (curr)
+	while (lst)
 	{
-		tmp = curr->next;
+		tmp = lst->next;
 		while (tmp)
 		{
-			if (tmp->value == curr->value)
-			{
-				ft_free_stacks(lst);
+			if (tmp->value == lst->value)
 				ft_send_error_sms();
-			}
 			tmp = tmp->next;
 		}
-		curr = curr->next;
+		lst = lst->next;
 	}
 }
 

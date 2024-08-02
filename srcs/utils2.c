@@ -1,25 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_stacks.c                                   :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gildo <gildo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/29 11:45:11 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/02 12:53:19 by gildo            ###   ########.fr       */
+/*   Created: 2024/07/24 12:57:38 by gildo             #+#    #+#             */
+/*   Updated: 2024/07/24 13:29:51 by gildo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void	ft_free_stacks(t_list **stack)
+int	ft_find_alpha_in_list(char *str)
 {
-	t_list	*node;
+	int	i;
 
-	while ((*stack))
+	i = 0;
+	while (*str)
 	{
-		node = *stack;
-		*stack = (*stack)->next;
-		free(node);
+		if (ft_isalpha(*str))
+			i = 1;
+		str++;
 	}
+	return (i);
+}
+
+void	ft_is_only_sapce(char *str)
+{
+	while (*str)
+	{
+		if (*str == 32 || *str == '\t')
+			str++;
+		else
+			return ;
+	}
+	ft_send_error_sms();
+}
+
+void	ft_free_matriz(char **arr)
+{
+	int	i;
+
+	i = -1;
+	while (arr[++i])
+		free(arr[i]);
+	free(arr);
 }

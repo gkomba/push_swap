@@ -6,11 +6,11 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 17:30:50 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/01 15:20:23 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/02 17:46:30 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_catch_big_from_stack_b(t_list **stack_a, t_list **stack_b)
 {
@@ -94,7 +94,7 @@ void	ft_move_b_to_a(t_list **stack_a, t_list **stack_b, int size)
 		ft_pa(stack_b, stack_a);
 		return ;
 	}
-	pivot = get_pivot_qs(*stack_b, size);
+	pivot = get_pivot_qs(*stack_b, size - 1);
 	i = -1;
 	rb = 0;
 	pa = 0;

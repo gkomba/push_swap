@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pop.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
+/*   By: gildo <gildo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 12:28:36 by gkomba            #+#    #+#             */
-/*   Updated: 2024/07/30 16:09:11 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/07/23 19:46:42 by gildo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_pop_first(t_list **lst)
 {

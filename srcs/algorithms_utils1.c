@@ -6,11 +6,11 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 18:44:10 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/02 17:18:48 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/07/30 15:37:47 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	ft_find_min_pos(t_list *stack)
 {
@@ -56,7 +56,7 @@ void	ft_push_up_b(t_list **stack)
 	min_pos = ft_find_max_pos(*stack);
 	len = ft_list_size(*stack);
 	if (min_pos == 0)
-		ft_pa(stack);
+		ft_sb(stack);
 	if (min_pos <= len / 2)
 	{
 		while (min_pos-- > 1)

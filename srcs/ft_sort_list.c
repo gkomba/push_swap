@@ -6,11 +6,11 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:36:54 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/01 13:40:39 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/07/30 15:40:30 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_sort_stacks(t_list **stack_a, t_list **stack_b)
 {
