@@ -6,7 +6,7 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 18:44:10 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/02 10:37:40 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/02 17:18:48 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	ft_push_up_b(t_list **stack)
 	min_pos = ft_find_max_pos(*stack);
 	len = ft_list_size(*stack);
 	if (min_pos == 0)
-		ft_sb(stack);
+		ft_pa(stack);
 	if (min_pos <= len / 2)
 	{
 		while (min_pos-- > 1)
@@ -80,7 +80,7 @@ void	ft_push_up(t_list **stack)
 
 	min_pos = ft_find_min_pos(*stack);
 	len = ft_list_size(*stack);
-	if (min_pos == 1)
+	if (min_pos == 0)
 		ft_sa(stack);
 	if (min_pos <= len / 2)
 	{

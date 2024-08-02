@@ -6,7 +6,7 @@
 /*   By: gkomba <<marvin@42.fr> >                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 18:42:28 by gkomba            #+#    #+#             */
-/*   Updated: 2024/07/30 16:09:24 by gkomba           ###   ########.fr       */
+/*   Updated: 2024/08/02 17:10:52 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_sort_three(t_list **stack_a, int close)
 void	ft_sort_four(t_list **stack_a, t_list **stack_b, int close)
 {
 	ft_push_up(stack_a);
-	while (!ft_is_sorted(*stack_a))
+	if (!ft_is_sorted(*stack_a))
 	{
 		ft_pb(stack_b, stack_a);
 		ft_sort_three(stack_a, 0);
@@ -64,7 +64,7 @@ void	ft_sort_four(t_list **stack_a, t_list **stack_b, int close)
 void	ft_sort_five(t_list **stack_a, t_list **stack_b)
 {
 	ft_push_up(stack_a);
-	while (!ft_is_sorted(*stack_a))
+	if (!ft_is_sorted(*stack_a))
 	{
 		ft_pb(stack_b, stack_a);
 		ft_sort_four(stack_a, stack_b, 0);
