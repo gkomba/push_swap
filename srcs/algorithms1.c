@@ -42,7 +42,10 @@ void	ft_sort_three(t_list **stack_a, int close)
 	if (ft_find_max_list(*stack_a) == (*stack_a)->next->value)
 		ft_rra(stack_a);
 	if (close == 1)
+	{
+		ft_free_stacks(stack_a);
 		exit(0);
+	}
 }
 
 void	ft_sort_four(t_list **stack_a, t_list **stack_b, int close)

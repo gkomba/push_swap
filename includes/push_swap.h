@@ -13,10 +13,8 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-// # include <stdio.h>
 # include "../ft_printf/ft_printf.h"
 # include "../libft/libft.h"
-# include <stdio.h>
 # include <stdlib.h>
 
 typedef struct s_list	t_list;
@@ -30,53 +28,33 @@ struct					s_list
 void					ft_push_up_b(t_list **stack);
 void					ft_catch_big_from_stack_b(t_list **stack_a,
 							t_list **stack_b);
-
-//				Actions	To Swap				by:
-// gkomba
 void					ft_sa(t_list **stack_a);
 void					ft_sb(t_list **stack_b);
 void					ft_ss(t_list **stack_a, t_list **stack_b);
-
-//				Actions	To Push				by:
-// gkomba
 void					ft_pa(t_list **stack_b, t_list **stack_a);
 void					ft_pb(t_list **stack_b, t_list **stack_a);
-
-//				Actions	To Rotate			by:
-// gkomba
 void					ft_ra(t_list **stack_a);
 void					ft_rb(t_list **stack_b);
 void					ft_rr(t_list **stack_a, t_list **stack_b);
 void					ft_rra(t_list **stack_a);
 void					ft_rrb(t_list **stack_b);
 void					ft_rrr(t_list **stack_a, t_list **stack_b);
-
-//				Check Input Error			by:
-// gkomba
 void					ft_check_args(int argc, char **argv);
 void					ft_take_args(char **av, t_list **stack);
 void					ft_check_args_pro(char **argv);
 void					ft_input_error(int argc, char **argv);
 void					ft_is_only_sapce(char *str);
-void					ft_free_matriz(char **arr);
-
-//				Void List Funtions			by:
-// gkomba
 void					ft_pop_first(t_list **lst);
 void					ft_pop_last(t_list **lst);
 void					ft_swap_last_to_first(t_list **lst);
 void					ft_swap_first_to_last(t_list **lst);
 void					ft_list_remove(t_list **lst, int value);
 void					ft_remove_list_duplicate(t_list **lst);
-void					ft_check_list_dup(t_list *lst);
 void					ft_sort_list(t_list *lst);
 void					ft_add_first(t_list **list, int new_value);
 void					ft_add_last(t_list **list, int new_value);
 void					ft_free_each_node(t_list **lst);
 void					ft_free_stacks(t_list **stack_a);
-
-//				Sort stacks 				by;
-// gkomba
 void					ft_sort_stacks(t_list **stack_a, t_list **stack_b);
 void					ft_sort_two(t_list **stack_a);
 void					ft_sort_tree(t_list **stack_a, int close);
@@ -89,8 +67,6 @@ void					ft_quick_sort(t_list **stack_a, t_list **stack_b,
 							int size);
 void					ft_quick_seletion_sort(t_list **stack_a,
 							t_list **stack_b, int size);
-
-//				Sort Utils by: gkomba
 void					ft_move_a_to_b(t_list **stack_a, t_list **stack_b,
 							int r);
 void					ft_move_b_to_a(t_list **stack_a, t_list **stack_b,
@@ -109,7 +85,10 @@ void					ft_do_rra_and_rrb_count(t_list **stack, int n, char s,
 							int i);
 void					ft_push_up(t_list **stack_a);
 void					ft_push_up_b(t_list **stack);
+void					ft_send_error_sms(void);
 void					ft_push_back(t_list **stack_b, t_list **stack_a);
+void					ft_putlist_nbr(t_list *list);
+int						ft_check_list_dup(t_list *lst);
 int						ft_find_min_pos(t_list *stack);
 int						ft_find_max_pos(t_list *stack);
 int						get_pivot(t_list *stack, int size);
@@ -117,14 +96,6 @@ int						get_pivot_qs(t_list *stack, int size);
 int						ft_do_ra_and_rb_count(t_list **stack, char s);
 int						ft_do_pb_and_pa_count(t_list **stack_a,
 							t_list **stack_b, char stack);
-
-//				Print Funtions				by:
-// gkomba
-void					ft_send_error_sms(void);
-void					ft_putlist_nbr(t_list *list);
-
-//				Int List Funtions			by:
-// gkomba
 int						ft_find_max_list(t_list *lst);
 int						ft_find_min_list(t_list *lst);
 int						ft_list_size(t_list *lst);

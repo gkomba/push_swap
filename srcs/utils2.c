@@ -37,13 +37,3 @@ void	ft_is_only_sapce(char *str)
 	}
 	ft_send_error_sms();
 }
-
-void	ft_free_matriz(char **arr)
-{
-	int	i;
-
-	i = -1;
-	while (arr[++i])
-		free(arr[i]);
-	free(arr);
-}

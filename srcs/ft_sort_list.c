@@ -27,12 +27,14 @@ void	ft_sort_stacks(t_list **stack_a, t_list **stack_b)
 		if (size == 2)
 			ft_sort_two(stack_a);
 		else if (size == 3)
-			ft_sort_three(stack_a, 0);
+			ft_sort_three(stack_a, 1);
 		else if (size == 4)
-			ft_sort_four(stack_a, stack_b, 0);
+			ft_sort_four(stack_a, stack_b, 1);
 		else if (size == 5)
 			ft_sort_five(stack_a, stack_b);
-		else if (size > 5 && size <= 200)
+		else if (size >= 6 && size <= 49)
+			ft_seletion_sort(stack_a, stack_b);
+		else if (size >= 50 && size <= 200)
 			ft_quick_seletion_sort(stack_a, stack_b, size);
 		else if (size > 200)
 			ft_quick_sort(stack_a, stack_b, size);

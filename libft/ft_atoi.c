@@ -33,7 +33,7 @@ int	ft_atoi(const char *nptr)
 	return (resul * sign);
 }
 
-int	ft_atoi_v2(const char *nptr)
+int	ft_atoi_v2(const char *nptr, char **mat)
 {
 	int		sign;
 	long	resul;
@@ -53,6 +53,7 @@ int	ft_atoi_v2(const char *nptr)
 	}
 	if ((resul < INT_MIN) || (resul > INT_MAX))
 	{
+		ft_free_matriz(mat);
 		ft_putendl_fd("Error", 2);
 		exit(1);
 	}

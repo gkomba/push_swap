@@ -101,7 +101,7 @@ void	ft_take_args(char **av, t_list **stack)
 		j = 0;
 		while (mat[j])
 		{
-			ft_add_last(stack, ft_atoi_v2(mat[j]));
+			ft_add_last(stack, ft_atoi_v2(mat[j], mat));
 			j++;
 		}
 		ft_free_matriz(mat);

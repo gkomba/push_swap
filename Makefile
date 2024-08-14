@@ -32,10 +32,8 @@ SRCS = srcs/ft_add_list_element.c\
 	srcs/algorithms_utils3.c\
 	srcs/push_swap.c\
 
-MAKEFLAGS += -silent
-
 OBJS = ${SRCS:.c=.o}
-CC = gcc
+CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 PRINTF = ft_printf
@@ -44,9 +42,9 @@ LIBFT = libft
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	@make -s -C ${PRINTF}
-	@make -s -C ${LIBFT}
-	@${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${LIBFT}/libft.a ${PRINTF}/libftprintf.a
+	make -C ${PRINTF}
+	make -C ${LIBFT}
+	${CC} ${CFLAGS} -o ${NAME} ${OBJS} ${LIBFT}/libft.a ${PRINTF}/libftprintf.a
 	@echo "\033[0;32mOK!\033[0m"
 
 norm:
@@ -60,14 +58,14 @@ git: fclean
 	git push
 
 clean:
-	@make clean -s -C ${PRINTF}
-	@make clean -s -C ${LIBFT}
-	@${RM} ${OBJS}
+	make clean -s -C ${PRINTF}
+	make clean -s -C ${LIBFT}
+	${RM} ${OBJS}
 
 fclean: clean
-	@make fclean -s -C ${PRINTF}
-	@make fclean -s -C ${LIBFT}
-	@${RM} ${NAME}
+	make fclean -s -C ${PRINTF}
+	make fclean -s -C ${LIBFT}
+	${RM} ${NAME}
 
 re: fclean all
 

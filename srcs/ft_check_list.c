@@ -12,23 +12,27 @@
 
 #include "../includes/push_swap.h"
 
-void	ft_check_list_dup(t_list *lst)
+int	ft_check_list_dup(t_list *lst)
 {
 	t_list	*tmp;
 
 	if (lst == NULL || lst->next == NULL)
-		return ;
+		return (1);
 	while (lst)
 	{
 		tmp = lst->next;
 		while (tmp)
 		{
 			if (tmp->value == lst->value)
-				ft_send_error_sms();
+			{
+				ft_putendl_fd("Error", 2);
+				return (0);
+			}
 			tmp = tmp->next;
 		}
 		lst = lst->next;
 	}
+	return (1);
 }
 
 int	ft_is_sorted(t_list *lst)

@@ -22,9 +22,9 @@ SRCS =	ft_print_char.c\
 		
 OBJS = ${SRCS:.c=.o}
 LIBC = ar rcs
-CC = gcc
+CC = cc
 RM = rm -f
-CFLAGS = -W -W -W
+CFLAGS = -Wall -Werror -Wextra
 
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
