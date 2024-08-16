@@ -17,17 +17,10 @@
 # include "../libft/libft.h"
 # include <stdlib.h>
 
-typedef struct s_list	t_list;
-
-struct					s_list
-{
-	int					value;
-	t_list				*next;
-};
-
 void					ft_push_up_b(t_list **stack);
 void					ft_catch_big_from_stack_b(t_list **stack_a,
 							t_list **stack_b);
+void					ft_pop_last(t_list **lst);
 void					ft_sa(t_list **stack_a);
 void					ft_sb(t_list **stack_b);
 void					ft_ss(t_list **stack_a, t_list **stack_b);
@@ -45,7 +38,6 @@ void					ft_check_args_pro(char **argv);
 void					ft_input_error(int argc, char **argv);
 void					ft_is_only_sapce(char *str);
 void					ft_pop_first(t_list **lst);
-void					ft_pop_last(t_list **lst);
 void					ft_swap_last_to_first(t_list **lst);
 void					ft_swap_first_to_last(t_list **lst);
 void					ft_list_remove(t_list **lst, int value);
@@ -53,8 +45,6 @@ void					ft_remove_list_duplicate(t_list **lst);
 void					ft_sort_list(t_list *lst);
 void					ft_add_first(t_list **list, int new_value);
 void					ft_add_last(t_list **list, int new_value);
-void					ft_free_each_node(t_list **lst);
-void					ft_free_stacks(t_list **stack_a);
 void					ft_sort_stacks(t_list **stack_a, t_list **stack_b);
 void					ft_sort_two(t_list **stack_a);
 void					ft_sort_tree(t_list **stack_a, int close);
@@ -98,7 +88,6 @@ int						ft_do_pb_and_pa_count(t_list **stack_a,
 							t_list **stack_b, char stack);
 int						ft_find_max_list(t_list *lst);
 int						ft_find_min_list(t_list *lst);
-int						ft_list_size(t_list *lst);
 int						ft_sum_list(t_list *lst);
 int						ft_find_list_element(t_list *lst, int item);
 int						ft_push_last_to_first(t_list **lst);

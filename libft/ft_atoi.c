@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -33,7 +34,7 @@ int	ft_atoi(const char *nptr)
 	return (resul * sign);
 }
 
-int	ft_atoi_v2(const char *nptr, char **mat)
+int	ft_atoi_v2(const char *nptr, char **mat, t_list **stack_a)
 {
 	int		sign;
 	long	resul;
@@ -54,6 +55,8 @@ int	ft_atoi_v2(const char *nptr, char **mat)
 	if ((resul < INT_MIN) || (resul > INT_MAX))
 	{
 		ft_free_matriz(mat);
+		if (ft_list_size(*stack_a))
+			ft_free_stacks(stack_a);
 		ft_putendl_fd("Error", 2);
 		exit(1);
 	}

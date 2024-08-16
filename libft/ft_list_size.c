@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_matriz.c                                   :+:      :+:    :+:   */
+/*   ft_list_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkomba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/15 16:13:46 by gkomba            #+#    #+#             */
-/*   Updated: 2024/08/15 16:13:48 by gkomba           ###   ########.fr       */
+/*   Created: 2024/08/15 16:26:34 by gkomba            #+#    #+#             */
+/*   Updated: 2024/08/15 16:26:36 by gkomba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_matriz(char **arr)
+int	ft_list_size(t_list *lst)
 {
-	int	i;
+	int	len;
 
-	i = -1;
-	while (arr[++i])
-		free(arr[i]);
-	free(arr);
+	len = 0;
+	while (lst)
+	{
+		len++;
+		lst = lst->next;
+	}
+	return (len);
 }

@@ -23,7 +23,6 @@ SRCS = srcs/ft_add_list_element.c\
 	srcs/rrotate.c\
 	srcs/utils1.c\
 	srcs/utils2.c\
-	srcs/ft_free_stacks.c\
 	srcs/algorithms1.c\
 	srcs/algorithms2.c\
 	srcs/algorithms3.c\

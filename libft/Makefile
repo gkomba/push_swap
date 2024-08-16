@@ -27,13 +27,15 @@ SRCS = 	ft_strlen.c\
 	ft_strtrim.c\
 	ft_split.c\
 	ft_itoa.c\
+	ft_free_matriz.c\
+	ft_free_stacks.c\
+	ft_list_size.c\
 	ft_putchar_fd.c\
 	ft_putstr_fd.c\
 	ft_striteri.c\
 	ft_strmapi.c\
 	ft_putendl_fd.c\
 	ft_putnbr_fd.c\
-	ft_free_matriz.c\
 
 OBJS = ${SRCS:.c=.o}
 LIBC = ar rcs

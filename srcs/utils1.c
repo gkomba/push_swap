@@ -56,16 +56,3 @@ void	ft_putlist_nbr(t_list *list)
 		list = list->next;
 	}
 }
-
-int	ft_list_size(t_list *lst)
-{
-	int	len;
-
-	len = 0;
-	while (lst)
-	{
-		len++;
-		lst = lst->next;
-	}
-	return (len);
-}
